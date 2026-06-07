@@ -1,0 +1,28 @@
+{
+  "id": "medicus",
+  "name": "Medicus",
+  "faction": "roman",
+  "description": "Guaritore militare romano che combina erboristeria, chirurgia da campo e preghiere agli dei. Indispensabile per la sopravvivenza della legione.",
+  "role": "healer",
+  "armor_type": "light",
+  "weapon_types": ["staff", "mace", "dagger"],
+  "base_strength": 8,
+  "base_dexterity": 10,
+  "base_constitution": 12,
+  "base_intelligence": 13,
+  "base_piety": 16,
+  "base_charisma": 11,
+  "base_speed": 5.0,
+  "health_per_level": 8,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "cura_ferite"},
+    {"level": 3,  "ability_id": "bende_emostatiche"},
+    {"level": 5,  "ability_id": "contravveleno"},
+    {"level": 8,  "ability_id": "cura_di_gruppo"},
+    {"level": 12, "ability_id": "rinvigorire"},
+    {"level": 15, "ability_id": "resurrezione"},
+    {"level": 20, "ability_id": "benedizione_di_marte"},
+    {"level": 30, "ability_id": "miracolo_della_vita"},
+    {"level": 40, "ability_id": "egida_divina"}
+  ]
+}

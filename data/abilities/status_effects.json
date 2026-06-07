@@ -1,0 +1,8 @@
+{
+  "id": "stun_2s",
+  "name": "Stordito",
+  "description": "Impossibilitato a muoversi o usare abilità.",
+  "duration": 2.0,
+  "type": "cc",
+  "stat_modifiers": { "speed": -999 }
+}

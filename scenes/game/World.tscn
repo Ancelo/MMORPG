@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://world"]
+
+[ext_resource type="Script" path="res://scripts/world/WorldZone.gd" id="1_zone"]
+[ext_resource type="Script" path="res://scripts/faction/RvRManager.gd" id="2_rvr"]
+
+[node name="World" type="Node3D"]
+
+[node name="RvRManager" type="Node" parent="."]
+script = ExtResource("2_rvr")
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 50, 0)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="Roman" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 300, 1, 0)
+
+[node name="Galli" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -300, 1, 0)
+
+[node name="Germani" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 400)
+
+[node name="Terrain" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
+
+[node name="Zones" type="Node3D" parent="."]
+
+[node name="ForumRomanum" type="Node3D" parent="Zones"]
+script = ExtResource("1_zone")
+zone_id = "forum_romanum"
+zone_name = "Foro Romano"
+
+[node name="FrontieraReno" type="Node3D" parent="Zones"]
+script = ExtResource("1_zone")
+zone_id = "frontiera_reno"
+zone_name = "Frontiera del Reno"
+is_rvr_zone = true

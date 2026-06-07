@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://main_menu"]
+
+[ext_resource type="Script" path="res://scripts/ui/MainMenu.gd" id="1_menu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.04, 0.03, 1)
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 80.0
+offset_right = 200.0
+offset_bottom = 130.0
+text = "ROMA AETERNA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 135.0
+offset_right = 200.0
+offset_bottom = 160.0
+text = "Il Destino dell'Impero"
+horizontal_alignment = 1
+
+[node name="MenuPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -150.0
+offset_right = 180.0
+offset_bottom = 150.0
+
+[node name="VBox" type="VBoxContainer" parent="MenuPanel"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AddressInput" type="LineEdit" parent="MenuPanel/VBox"]
+layout_mode = 2
+placeholder_text = "Indirizzo Server (127.0.0.1)"
+name = "AddressInput"
+
+[node name="PortInput" type="LineEdit" parent="MenuPanel/VBox"]
+layout_mode = 2
+placeholder_text = "Porta (7777)"
+name = "PortInput"
+
+[node name="ConnectButton" type="Button" parent="MenuPanel/VBox"]
+layout_mode = 2
+text = "Connetti al Server"
+name = "ConnectButton"
+
+[node name="HostButton" type="Button" parent="MenuPanel/VBox"]
+layout_mode = 2
+text = "Ospita Partita Locale"
+name = "HostButton"
+
+[node name="StatusLabel" type="Label" parent="MenuPanel/VBox"]
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+name = "StatusLabel"

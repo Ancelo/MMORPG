@@ -1,0 +1,35 @@
+{
+  "id": "forum_romanum",
+  "name": "Foro Romano",
+  "description": "Il cuore pulsante di Roma. Zona sicura dove i giocatori Romani iniziano la loro avventura, mercanti, quest givers e accesso ai dungeon.",
+  "level_min": 1,
+  "level_max": 5,
+  "zone_type": "safe",
+  "is_rvr_zone": false,
+  "allowed_factions": [1],
+  "ambient_weather": ["sunny", "cloudy"],
+  "entry_points": {
+    "default": [0.0, 0.5, 0.0],
+    "from_via_appia": [-50.0, 0.5, 80.0],
+    "from_colosseo": [30.0, 0.5, -20.0]
+  },
+  "npc_spawns": [
+    {
+      "id": "merchants",
+      "npc_id": "merchant_roman",
+      "count": 3,
+      "center": [10.0, 0.0, 5.0],
+      "radius": 8.0,
+      "respawn_seconds": 0
+    },
+    {
+      "id": "guards",
+      "npc_id": "guard_roman",
+      "count": 5,
+      "center": [0.0, 0.0, 0.0],
+      "radius": 20.0,
+      "respawn_seconds": 0
+    }
+  ],
+  "quests_available": ["prima_missione", "caccia_al_brigante", "rifornimenti_per_la_legione"]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "sagittarius",
+  "name": "Sagittario",
+  "faction": "roman",
+  "description": "Arciere d'élite dell'esercito romano. Piogge di frecce e colpi precisi da lunga distanza. Fragile ma letale quando protetto.",
+  "role": "ranged_dps",
+  "armor_type": "medium",
+  "weapon_types": ["bow", "crossbow", "dagger"],
+  "base_strength": 10,
+  "base_dexterity": 16,
+  "base_constitution": 11,
+  "base_intelligence": 11,
+  "base_piety": 8,
+  "base_charisma": 10,
+  "base_speed": 5.5,
+  "health_per_level": 9,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "freccia_rapida"},
+    {"level": 3,  "ability_id": "tiro_multiplo"},
+    {"level": 5,  "ability_id": "freccia_incendiaria"},
+    {"level": 8,  "ability_id": "tiro_alla_testa"},
+    {"level": 12, "ability_id": "pioggia_di_frecce"},
+    {"level": 15, "ability_id": "freccia_avvelenata"},
+    {"level": 20, "ability_id": "tiro_perforante"},
+    {"level": 30, "ability_id": "mira_dellaquila"}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "berserker",
+  "name": "Berserker",
+  "faction": "germani",
+  "description": "Guerriero germanico in trance di battaglia. Ignora il dolore, infligge danni devastanti ma ha scarsa difesa. Più è ferito, più è pericoloso.",
+  "role": "melee_dps",
+  "armor_type": "light",
+  "weapon_types": ["axe", "greatsword", "club"],
+  "base_strength": 18,
+  "base_dexterity": 12,
+  "base_constitution": 14,
+  "base_intelligence": 6,
+  "base_piety": 7,
+  "base_charisma": 8,
+  "base_speed": 5.8,
+  "health_per_level": 12,
+  "special_mechanic": "rage",
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "ascia_spaccaossa"},
+    {"level": 3,  "ability_id": "urlo_della_foresta"},
+    {"level": 5,  "ability_id": "frenesia_berserker"},
+    {"level": 8,  "ability_id": "colpo_rotante"},
+    {"level": 12, "ability_id": "ira_del_sangue"},
+    {"level": 15, "ability_id": "invulnerabilita_momentanea"},
+    {"level": 20, "ability_id": "tempesta_di_ascia"},
+    {"level": 30, "ability_id": "furia_di_wotan"}
+  ]
+}

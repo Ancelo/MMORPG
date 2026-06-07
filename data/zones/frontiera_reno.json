@@ -1,0 +1,43 @@
+{
+  "id": "frontiera_reno",
+  "name": "Frontiera del Reno",
+  "description": "Le terre di frontiera oltre il Reno. Zona RvR aperta dove Romani, Galli e Germani si scontrano per il controllo dei forti. Livello 30+.",
+  "level_min": 30,
+  "level_max": 50,
+  "zone_type": "rvr",
+  "is_rvr_zone": true,
+  "allowed_factions": [1, 2, 3],
+  "ambient_weather": ["foggy", "rainy", "stormy", "overcast"],
+  "entry_points": {
+    "portal_roman":   [300.0, 5.0, 0.0],
+    "portal_galli":   [-300.0, 5.0, 0.0],
+    "portal_germani": [0.0, 5.0, 400.0]
+  },
+  "objectives": [
+    "keep_rhenus",
+    "keep_danuvius",
+    "tower_north_1",
+    "tower_north_2",
+    "relic_aquila",
+    "relic_carnyx",
+    "relic_ursa"
+  ],
+  "npc_spawns": [
+    {
+      "id": "wolves_north",
+      "npc_id": "lupo_selvaggio",
+      "count": 8,
+      "center": [50.0, 0.0, 150.0],
+      "radius": 30.0,
+      "respawn_seconds": 120
+    },
+    {
+      "id": "bandits_west",
+      "npc_id": "brigante_germanico",
+      "count": 6,
+      "center": [-80.0, 0.0, 120.0],
+      "radius": 20.0,
+      "respawn_seconds": 90
+    }
+  ]
+}

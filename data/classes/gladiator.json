@@ -1,0 +1,27 @@
+{
+  "id": "gladiator",
+  "name": "Gladiatore",
+  "faction": "roman",
+  "description": "Combattente dell'arena addestrato per lo spettacolo e la morte. Maestro di stili diversi: reziario, secutore, mirmillone. DPS puro con capacità di sopravvivenza.",
+  "role": "melee_dps",
+  "armor_type": "medium",
+  "weapon_types": ["sword", "net", "trident", "shield"],
+  "base_strength": 16,
+  "base_dexterity": 14,
+  "base_constitution": 13,
+  "base_intelligence": 7,
+  "base_piety": 7,
+  "base_charisma": 13,
+  "base_speed": 5.2,
+  "health_per_level": 11,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "colpo_selvaggio"},
+    {"level": 3,  "ability_id": "rete_da_caccia"},
+    {"level": 5,  "ability_id": "tridente_penetrante"},
+    {"level": 8,  "ability_id": "frenesia_del_sangue"},
+    {"level": 12, "ability_id": "sfida"},
+    {"level": 15, "ability_id": "danza_della_morte"},
+    {"level": 20, "ability_id": "colpo_spettacolare"},
+    {"level": 30, "ability_id": "finale_arena"}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "prima_missione",
+  "name": "Prima Missione del Legionario",
+  "description": "Il Centurione Gaio Aurelio ti ha assegnato il tuo primo compito: elimina i briganti che infestano la via Appia e riporta il loro sigillo come prova.",
+  "giver": "centurione_aurelio",
+  "required_level": 1,
+  "required_faction": 1,
+  "prerequisites": [],
+  "fail_on_death": false,
+  "objectives": [
+    {
+      "id": "uccidi_briganti",
+      "type": "kill",
+      "target": "brigante_via_appia",
+      "description": "Uccidi briganti sulla Via Appia",
+      "count": 5
+    },
+    {
+      "id": "recupera_sigillo",
+      "type": "collect",
+      "item": "sigillo_brigante",
+      "description": "Recupera il sigillo del capo brigante",
+      "count": 1
+    }
+  ],
+  "rewards": {
+    "xp": 500,
+    "gold": 10,
+    "items": ["lorica_hamata_iniziale"]
+  }
+}

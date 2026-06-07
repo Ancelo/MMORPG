@@ -1,0 +1,29 @@
+{
+  "id": "legionary",
+  "name": "Legionario",
+  "faction": "roman",
+  "description": "Il fulcro della potenza militare romana. Specializzato nel combattimento ravvicinato con gladio e scudo. Eccelle nella protezione dei compagni e nella resistenza ai danni.",
+  "role": "tank",
+  "armor_type": "heavy",
+  "weapon_types": ["sword", "shield", "spear"],
+  "base_strength": 14,
+  "base_dexterity": 10,
+  "base_constitution": 16,
+  "base_intelligence": 8,
+  "base_piety": 10,
+  "base_charisma": 10,
+  "base_speed": 4.5,
+  "health_per_level": 15,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "gladio_colpo"},
+    {"level": 3,  "ability_id": "scudo_bash"},
+    {"level": 5,  "ability_id": "formazione_testudo"},
+    {"level": 8,  "ability_id": "grido_di_guerra"},
+    {"level": 12, "ability_id": "pilum_lancio"},
+    {"level": 15, "ability_id": "furia_romana"},
+    {"level": 20, "ability_id": "muro_di_scudi"},
+    {"level": 25, "ability_id": "colpo_alla_gola"},
+    {"level": 30, "ability_id": "resistenza_del_ferro"},
+    {"level": 40, "ability_id": "aquila_imperiale"}
+  ]
+}

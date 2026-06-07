@@ -1,0 +1,28 @@
+{
+  "id": "druida",
+  "name": "Druido",
+  "faction": "galli",
+  "description": "Sacerdote delle foreste celtiche. Canalizza la forza della natura per guarire, maledire e trasformarsi. Versatile: può sia guarire che infliggere danni.",
+  "role": "hybrid",
+  "armor_type": "medium",
+  "weapon_types": ["staff", "sickle", "club"],
+  "base_strength": 10,
+  "base_dexterity": 11,
+  "base_constitution": 13,
+  "base_intelligence": 15,
+  "base_piety": 15,
+  "base_charisma": 11,
+  "base_speed": 5.0,
+  "health_per_level": 10,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "guarigione_della_natura"},
+    {"level": 3,  "ability_id": "radici_aggroviglianti"},
+    {"level": 5,  "ability_id": "fiamma_del_drago"},
+    {"level": 8,  "ability_id": "ira_del_bosco"},
+    {"level": 12, "ability_id": "rigenerazione"},
+    {"level": 15, "ability_id": "forma_del_lupo"},
+    {"level": 20, "ability_id": "tempesta_verde"},
+    {"level": 30, "ability_id": "cerchio_della_vita"},
+    {"level": 40, "ability_id": "ira_di_cernunnos"}
+  ]
+}

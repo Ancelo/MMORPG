@@ -1,0 +1,55 @@
+[
+  {
+    "id": "lorica_hamata_iniziale",
+    "name": "Lorica Hamata",
+    "description": "Cotta di maglia romana. Buon compromesso tra protezione e mobilità.",
+    "type": "ARMOR",
+    "rarity": "COMMON",
+    "slot": "CHEST",
+    "required_level": 1,
+    "armor": 45,
+    "stat_bonuses": { "constitution": 4 },
+    "value": 80,
+    "icon": "res://assets/ui/items/lorica_hamata.png"
+  },
+  {
+    "id": "galea_bronzo",
+    "name": "Galea di Bronzo",
+    "description": "Elmo romano in bronzo con cimiero. Protegge bene la testa.",
+    "type": "ARMOR",
+    "rarity": "COMMON",
+    "slot": "HEAD",
+    "required_level": 1,
+    "armor": 25,
+    "stat_bonuses": { "constitution": 2 },
+    "value": 40,
+    "icon": "res://assets/ui/items/galea.png"
+  },
+  {
+    "id": "lorica_segmentata",
+    "name": "Lorica Segmentata",
+    "description": "L'armatura a piastre del Legionario d'élite. Massima protezione fisica.",
+    "type": "ARMOR",
+    "rarity": "UNCOMMON",
+    "slot": "CHEST",
+    "required_level": 15,
+    "required_class": "legionary",
+    "armor": 90,
+    "stat_bonuses": { "constitution": 8, "strength": 3, "speed": -0.3 },
+    "value": 300,
+    "icon": "res://assets/ui/items/lorica_segmentata.png"
+  },
+  {
+    "id": "caligae_legionario",
+    "name": "Caligae Legionario",
+    "description": "I sandali chiodati romani. Permettono lunghe marce.",
+    "type": "ARMOR",
+    "rarity": "COMMON",
+    "slot": "FEET",
+    "required_level": 1,
+    "armor": 12,
+    "stat_bonuses": { "speed": 0.2 },
+    "value": 25,
+    "icon": "res://assets/ui/items/caligae.png"
+  }
+]
