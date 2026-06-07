@@ -1,0 +1,53 @@
+{
+  "id": "via_appia",
+  "name": "Via Appia",
+  "description": "La grande strada militare romana verso il Sud. Infestata da briganti e creature notturne nei pressi delle tombe.",
+  "level_min": 5,
+  "level_max": 15,
+  "zone_type": "pve",
+  "is_rvr_zone": false,
+  "allowed_factions": [1, 2, 3],
+  "ambient_weather": ["sunny", "cloudy", "dusty"],
+  "entry_points": {
+    "from_foro":    [-50.0, 0.5, 80.0],
+    "from_capua":   [200.0, 0.5, -100.0],
+    "dungeon_entry": [50.0, 0.5, 20.0]
+  },
+  "npc_spawns": [
+    {
+      "id": "briganti_via",
+      "npc_id": "brigante_via_appia",
+      "count": 8,
+      "center": [30.0, 0.0, 50.0],
+      "radius": 25.0,
+      "respawn_seconds": 120
+    },
+    {
+      "id": "lupi_notturni",
+      "npc_id": "lupo_notturno",
+      "count": 6,
+      "center": [-20.0, 0.0, 30.0],
+      "radius": 20.0,
+      "respawn_seconds": 90,
+      "active_hours": [21, 5]
+    },
+    {
+      "id": "scheletri_tombe",
+      "npc_id": "scheletro_tomba",
+      "count": 4,
+      "center": [80.0, 0.0, -30.0],
+      "radius": 15.0,
+      "respawn_seconds": 180
+    },
+    {
+      "id": "centurione_brigante",
+      "npc_id": "brigante_capo",
+      "count": 1,
+      "center": [60.0, 0.0, 60.0],
+      "radius": 3.0,
+      "respawn_seconds": 300,
+      "is_named": true
+    }
+  ],
+  "quests_available": ["caccia_al_brigante", "sigillo_del_capitano", "erbe_della_via"]
+}

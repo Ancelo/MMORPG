@@ -1,0 +1,22 @@
+{
+  "id": "catacombe_romane",
+  "name": "Catacombe di Roma",
+  "description": "Antiche catacombe sotto il Foro Romano. Infestate da non-morti e cultisti di Plutone. Il boss finale è il Sacerdote Corrotto Maximus.",
+  "level_min": 10,
+  "level_max": 20,
+  "min_players": 2,
+  "max_players": 6,
+  "time_limit": 3600,
+  "faction_allowed": [1, 2, 3],
+  "scene": "res://scenes/dungeon/CatacombeRomane.tscn",
+  "entry_point": [0.0, 1.0, 0.0],
+  "bosses": ["scheletro_centurione", "sacerdote_corrotto_maximus"],
+  "completion_rewards": {
+    "xp": 5000,
+    "items": {
+      "anello_del_sottosuolo": 0.8,
+      "mantello_catacombe": 0.5,
+      "gladius_di_maximus": 0.2
+    }
+  }
+}

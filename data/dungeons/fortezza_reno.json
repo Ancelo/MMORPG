@@ -1,0 +1,23 @@
+{
+  "id": "fortezza_reno",
+  "name": "Fortezza del Reno",
+  "description": "Un'antica fortezza romana ora occupata da guerrieri germanici. Dungeon RvR di fascia alta. Contiene la reliquia dell'Aquila.",
+  "level_min": 35,
+  "level_max": 50,
+  "min_players": 4,
+  "max_players": 8,
+  "time_limit": 5400,
+  "faction_allowed": [1, 2, 3],
+  "is_rvr_dungeon": true,
+  "scene": "res://scenes/dungeon/FortezzaReno.tscn",
+  "entry_point": [0.0, 2.0, -50.0],
+  "bosses": ["comandante_germanico_wulfric", "guardiano_della_reliquia"],
+  "completion_rewards": {
+    "xp": 15000,
+    "items": {
+      "armatura_del_conquistatore": 0.6,
+      "spada_del_reno": 0.4,
+      "ciondolo_del_confine": 0.9
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "sciamano",
+  "name": "Sciamano",
+  "faction": "germani",
+  "description": "Il mediatore tra il mondo dei vivi e quello degli spiriti. Usa la forza dei fulmini, totem potenti e maledizioni. Ruolo ibrido support/caster.",
+  "role": "support_caster",
+  "armor_type": "light",
+  "weapon_types": ["staff", "totem", "dagger"],
+  "base_strength": 8,
+  "base_dexterity": 11,
+  "base_constitution": 11,
+  "base_intelligence": 16,
+  "base_piety": 14,
+  "base_charisma": 10,
+  "base_speed": 5.0,
+  "health_per_level": 8,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "fulmine_degli_dei"},
+    {"level": 3,  "ability_id": "totem_guarigione"},
+    {"level": 5,  "ability_id": "maledizione_del_vento"},
+    {"level": 8,  "ability_id": "visione_sciamanica"},
+    {"level": 20, "ability_id": "tempesta_di_fulmini"},
+    {"level": 30, "ability_id": "spirito_antenato"}
+  ]
+}

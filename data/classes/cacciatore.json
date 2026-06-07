@@ -1,0 +1,27 @@
+{
+  "id": "cacciatore",
+  "name": "Cacciatore",
+  "faction": "galli",
+  "description": "Esperto della foresta e maestro della caccia. Usa archi, trappole e ha un animale compagno. Eccellente ranged DPS con utility di controllo.",
+  "role": "ranged_dps",
+  "armor_type": "medium",
+  "weapon_types": ["bow", "trap", "dagger"],
+  "base_strength": 10,
+  "base_dexterity": 16,
+  "base_constitution": 12,
+  "base_intelligence": 10,
+  "base_piety": 8,
+  "base_charisma": 10,
+  "base_speed": 5.5,
+  "health_per_level": 9,
+  "special_mechanic": "companion",
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "freccia_veloce_gallica"},
+    {"level": 3,  "ability_id": "trappola_di_filo"},
+    {"level": 5,  "ability_id": "freccia_avvelenata_gallica"},
+    {"level": 8,  "ability_id": "compagno_animale"},
+    {"level": 12, "ability_id": "tiro_di_precisione"},
+    {"level": 20, "ability_id": "pioggia_di_frecce_gallica"},
+    {"level": 30, "ability_id": "unione_con_la_natura"}
+  ]
+}

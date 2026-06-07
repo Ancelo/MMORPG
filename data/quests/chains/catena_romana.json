@@ -1,0 +1,118 @@
+[
+  {
+    "id": "caccia_al_brigante",
+    "name": "Caccia al Brigante",
+    "description": "I briganti infestano la Via Appia. Elimina il loro gruppo principale.",
+    "giver": "centurione_aurelio",
+    "required_level": 3,
+    "required_faction": 1,
+    "prerequisites": ["prima_missione"],
+    "objectives": [
+      {
+        "id": "uccidi_briganti_appia",
+        "type": "kill",
+        "target": "brigante_via_appia",
+        "description": "Elimina briganti sulla Via Appia",
+        "count": 10
+      }
+    ],
+    "rewards": { "xp": 1200, "gold": 25, "items": [] }
+  },
+  {
+    "id": "sigillo_del_capitano",
+    "name": "Il Sigillo del Capitano",
+    "description": "Il capo dei briganti è ancora in piedi. Trova il Brigante Capo e recupera il suo sigillo imperiale rubato.",
+    "giver": "centurione_aurelio",
+    "required_level": 5,
+    "required_faction": 1,
+    "prerequisites": ["caccia_al_brigante"],
+    "objectives": [
+      {
+        "id": "uccidi_capo_brigante",
+        "type": "kill",
+        "target": "brigante_capo",
+        "description": "Sconfiggi il Capitano dei Briganti",
+        "count": 1
+      },
+      {
+        "id": "recupera_sigillo_imperiale",
+        "type": "collect",
+        "item": "sigillo_imperiale",
+        "description": "Recupera il Sigillo Imperiale",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 2500, "gold": 50, "items": ["lorica_segmentata_iniziale"] }
+  },
+  {
+    "id": "la_legione_chiama",
+    "name": "La Legione Chiama",
+    "description": "Il Generale Gaio Cornelio ti convoca al Campo Militare. La tua reputazione ha raggiunto Roma.",
+    "giver": "messaggero_imperiale",
+    "required_level": 10,
+    "required_faction": 1,
+    "prerequisites": ["sigillo_del_capitano"],
+    "objectives": [
+      {
+        "id": "parla_generale",
+        "type": "location",
+        "location": "campo_militare_entrata",
+        "description": "Recati al Campo Militare e parla con il Generale Cornelio",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 3000, "gold": 100, "items": ["titolo_veterano"] }
+  },
+  {
+    "id": "minaccia_germanica",
+    "name": "La Minaccia Germanica",
+    "description": "I Germani si avvicinano al confine. Spia il loro accampamento e riporta i loro numeri.",
+    "giver": "generale_cornelio",
+    "required_level": 10,
+    "required_faction": 1,
+    "prerequisites": ["la_legione_chiama"],
+    "objectives": [
+      {
+        "id": "spia_accampamento",
+        "type": "location",
+        "location": "accampamento_germanico_nord",
+        "description": "Individua l'accampamento germanico",
+        "count": 1
+      },
+      {
+        "id": "uccidi_esploratori",
+        "type": "kill",
+        "target": "esploratore_germanico",
+        "description": "Elimina esploratori germanici",
+        "count": 5
+      }
+    ],
+    "rewards": { "xp": 5000, "gold": 150, "items": ["elmo_del_centurione"] }
+  },
+  {
+    "id": "difesa_del_reno",
+    "name": "Difesa del Reno",
+    "description": "I Germani attaccano la fortezza del Reno! Unisciti alla difesa e respingi l'assalto.",
+    "giver": "generale_cornelio",
+    "required_level": 30,
+    "required_faction": 1,
+    "prerequisites": ["minaccia_germanica"],
+    "objectives": [
+      {
+        "id": "difendi_fortezza",
+        "type": "kill",
+        "target": "assalitore_germanico",
+        "description": "Uccidi assalitori germanici alla Fortezza del Reno",
+        "count": 25
+      },
+      {
+        "id": "sconfiggi_comandante",
+        "type": "kill",
+        "target": "comandante_germanico_wulfric",
+        "description": "Sconfiggi il Comandante Wulfric",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 20000, "gold": 500, "items": ["armatura_del_centurione_elite", "titolo_difensore_del_reno"] }
+  }
+]

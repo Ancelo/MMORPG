@@ -1,0 +1,73 @@
+[
+  {
+    "id": "rito_del_druido",
+    "name": "Il Rito del Druido",
+    "description": "Per diventare un degno guerriero dei Galli devi raccogliere le erbe sacre e partecipare al rito del solstizio.",
+    "giver": "druido_anziano_vercinrix",
+    "required_level": 1,
+    "required_faction": 2,
+    "prerequisites": [],
+    "objectives": [
+      {
+        "id": "raccogli_erbe_mistletoe",
+        "type": "collect",
+        "item": "mistletoe_sacro",
+        "description": "Raccogli il Mistletoe Sacro dalle foreste",
+        "count": 5
+      },
+      {
+        "id": "partecipa_rito",
+        "type": "location",
+        "location": "cerchio_druidi",
+        "description": "Partecipa al Rito del Solstizio",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 800, "gold": 15, "items": ["amuleto_druidico"] }
+  },
+  {
+    "id": "caccia_al_cinghiale",
+    "name": "La Grande Caccia",
+    "description": "La tribù ha bisogno di carne per il banchetto. Caccia i grandi cinghiali della foresta.",
+    "giver": "capo_tribù_ambiorix",
+    "required_level": 3,
+    "required_faction": 2,
+    "prerequisites": ["rito_del_druido"],
+    "objectives": [
+      {
+        "id": "uccidi_cinghiali",
+        "type": "kill",
+        "target": "cinghiale_selvaggio",
+        "description": "Caccia cinghiali selvaggi",
+        "count": 8
+      },
+      {
+        "id": "porta_zanne",
+        "type": "collect",
+        "item": "zanna_cinghiale",
+        "description": "Porta le zanne come trofeo",
+        "count": 3
+      }
+    ],
+    "rewards": { "xp": 1500, "gold": 30, "items": ["mantello_del_cacciatore"] }
+  },
+  {
+    "id": "il_nemico_avanza",
+    "name": "L'Aquila Avanza",
+    "description": "Le legioni romane si muovono verso le nostre terre. Tendi un'imboscata al gruppo di ricognizione romano.",
+    "giver": "capo_tribù_ambiorix",
+    "required_level": 10,
+    "required_faction": 2,
+    "prerequisites": ["caccia_al_cinghiale"],
+    "objectives": [
+      {
+        "id": "imboscata_romani",
+        "type": "kill",
+        "target": "esploratore_romano",
+        "description": "Elimina la ricognizione romana",
+        "count": 8
+      }
+    ],
+    "rewards": { "xp": 4000, "gold": 120, "items": ["spada_celtica_affilata"] }
+  }
+]

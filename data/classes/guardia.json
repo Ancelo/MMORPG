@@ -1,0 +1,25 @@
+{
+  "id": "guardia",
+  "name": "Guardia Germanica",
+  "faction": "germani",
+  "description": "Tank robusto dei Germani. Usa un grande scudo rotondo e armi pesanti. Specializzato nel controllo della folla e nella protezione dei compagni.",
+  "role": "tank",
+  "armor_type": "heavy",
+  "weapon_types": ["axe", "mace", "shield"],
+  "base_strength": 13,
+  "base_dexterity": 9,
+  "base_constitution": 17,
+  "base_intelligence": 7,
+  "base_piety": 9,
+  "base_charisma": 9,
+  "base_speed": 4.5,
+  "health_per_level": 14,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "colpo_scudo_germanico"},
+    {"level": 3,  "ability_id": "sfida_germanica"},
+    {"level": 5,  "ability_id": "muro_umano"},
+    {"level": 8,  "ability_id": "rompi_formazione"},
+    {"level": 15, "ability_id": "grido_del_vichingo"},
+    {"level": 25, "ability_id": "fortezza_vivente"}
+  ]
+}

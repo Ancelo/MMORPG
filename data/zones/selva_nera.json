@@ -1,0 +1,54 @@
+{
+  "id": "selva_nera",
+  "name": "Selva Nera",
+  "description": "La mitica Selva Nera dei Germani. Zona di partenza per i Germani, ostile e selvaggia per gli altri. Gli alberi sembrano guardare.",
+  "level_min": 1,
+  "level_max": 10,
+  "zone_type": "safe_germani",
+  "is_rvr_zone": false,
+  "allowed_factions": [1, 2, 3],
+  "safe_for_faction": [3],
+  "ambient_weather": ["foggy", "stormy", "overcast"],
+  "entry_points": {
+    "default":            [0.0, 0.5, 0.0],
+    "from_frontiera":     [-60.0, 0.5, 90.0],
+    "accampamento_nord":  [30.0, 0.5, -50.0]
+  },
+  "npc_spawns": [
+    {
+      "id": "lupi_selva",
+      "npc_id": "lupo_selva_nera",
+      "count": 12,
+      "center": [15.0, 0.0, 10.0],
+      "radius": 35.0,
+      "respawn_seconds": 60
+    },
+    {
+      "id": "orsi_germanici",
+      "npc_id": "orso_germanico",
+      "count": 5,
+      "center": [-25.0, 0.0, 30.0],
+      "radius": 20.0,
+      "respawn_seconds": 120
+    },
+    {
+      "id": "guardie_germane",
+      "npc_id": "guerriero_germano_guardia",
+      "count": 8,
+      "center": [0.0, 0.0, 0.0],
+      "radius": 20.0,
+      "respawn_seconds": 0
+    },
+    {
+      "id": "spirito_selva",
+      "npc_id": "spirito_della_selva",
+      "count": 1,
+      "center": [80.0, 0.0, 80.0],
+      "radius": 2.0,
+      "respawn_seconds": 1800,
+      "is_named": true,
+      "active_hours": [0, 6]
+    }
+  ],
+  "quests_available": ["prova_del_berserker", "caccia_al_lupo", "rito_sciamanico", "omaggio_a_wotan"]
+}

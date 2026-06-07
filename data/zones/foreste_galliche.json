@@ -1,0 +1,54 @@
+{
+  "id": "foreste_galliche",
+  "name": "Foreste Galliche",
+  "description": "Dense foreste a nord-ovest del Reno. Zona sicura per i Galli, PvE aperto per gli altri. Ricca di risorse naturali per gli Erboristi.",
+  "level_min": 1,
+  "level_max": 10,
+  "zone_type": "safe_galli",
+  "is_rvr_zone": false,
+  "allowed_factions": [1, 2, 3],
+  "safe_for_faction": [2],
+  "ambient_weather": ["foggy", "rainy", "cloudy", "overcast"],
+  "entry_points": {
+    "default":          [0.0, 0.5, 0.0],
+    "from_frontiera":   [50.0, 0.5, -80.0],
+    "villagio_druidi":  [-30.0, 0.5, 20.0]
+  },
+  "npc_spawns": [
+    {
+      "id": "cinghiali",
+      "npc_id": "cinghiale_selvaggio",
+      "count": 10,
+      "center": [20.0, 0.0, 15.0],
+      "radius": 30.0,
+      "respawn_seconds": 60
+    },
+    {
+      "id": "lupi_foresta",
+      "npc_id": "lupo_della_foresta",
+      "count": 8,
+      "center": [-40.0, 0.0, 10.0],
+      "radius": 25.0,
+      "respawn_seconds": 90
+    },
+    {
+      "id": "guardie_galliche",
+      "npc_id": "guerriero_gallo_guardia",
+      "count": 6,
+      "center": [0.0, 0.0, 5.0],
+      "radius": 15.0,
+      "respawn_seconds": 0
+    },
+    {
+      "id": "orso_antico",
+      "npc_id": "orso_antico_gallico",
+      "count": 1,
+      "center": [-60.0, 0.0, -40.0],
+      "radius": 5.0,
+      "respawn_seconds": 600,
+      "is_named": true,
+      "name": "Cernunnos l'Antico"
+    }
+  ],
+  "quests_available": ["rito_del_druido", "caccia_al_cinghiale", "erbe_sacre", "prova_del_guerriero"]
+}

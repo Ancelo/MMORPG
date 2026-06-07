@@ -1,0 +1,42 @@
+[
+  {
+    "id": "craft_pozione_cura_minore",
+    "name": "Prepara Pozione di Cura Minore",
+    "skill": "erborista",
+    "required_skill": 0,
+    "skill_xp": 10,
+    "result_item": "pozione_cura_minore_item",
+    "result_count": 3,
+    "ingredients": [
+      {"item": "erba_medicinale", "count": 2},
+      {"item": "acqua_pura", "count": 1}
+    ]
+  },
+  {
+    "id": "craft_pozione_cura_media",
+    "name": "Prepara Pozione di Cura Media",
+    "skill": "erborista",
+    "required_skill": 50,
+    "skill_xp": 30,
+    "result_item": "pozione_cura_media_item",
+    "result_count": 2,
+    "ingredients": [
+      {"item": "erba_rara", "count": 3},
+      {"item": "mistletoe_sacro", "count": 1},
+      {"item": "acqua_benedetta", "count": 1}
+    ]
+  },
+  {
+    "id": "craft_antidoto",
+    "name": "Prepara Antidoto",
+    "skill": "erborista",
+    "required_skill": 30,
+    "skill_xp": 20,
+    "result_item": "antidoto",
+    "result_count": 2,
+    "ingredients": [
+      {"item": "erba_medicinale", "count": 3},
+      {"item": "sale_grosso", "count": 1}
+    ]
+  }
+]

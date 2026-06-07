@@ -1,0 +1,25 @@
+{
+  "id": "guerriero_celtico",
+  "name": "Guerriero Celtico",
+  "faction": "galli",
+  "description": "Il guerriero celtico è un combattente ferocissimo che si batte con spade lunghe e scudi rotondi. Veloce e aggressivo, eccelle nel DPS melee e nel combattimento di gruppo.",
+  "role": "melee_dps",
+  "armor_type": "medium",
+  "weapon_types": ["sword", "axe", "shield"],
+  "base_strength": 15,
+  "base_dexterity": 13,
+  "base_constitution": 13,
+  "base_intelligence": 7,
+  "base_piety": 8,
+  "base_charisma": 10,
+  "base_speed": 5.5,
+  "health_per_level": 11,
+  "abilities_unlocked": [
+    {"level": 1,  "ability_id": "colpo_celtico"},
+    {"level": 3,  "ability_id": "grido_di_guerra_gallico"},
+    {"level": 5,  "ability_id": "vortice_di_lame"},
+    {"level": 8,  "ability_id": "carica_celtica"},
+    {"level": 15, "ability_id": "danza_del_guerriero"},
+    {"level": 30, "ability_id": "furia_celtica_finale"}
+  ]
+}

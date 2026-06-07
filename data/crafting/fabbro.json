@@ -1,0 +1,55 @@
+[
+  {
+    "id": "craft_gladio_standard",
+    "name": "Forgia Gladio",
+    "skill": "fabbro",
+    "required_skill": 0,
+    "skill_xp": 15,
+    "result_item": "gladius_standard",
+    "result_count": 1,
+    "ingredients": [
+      {"item": "barra_ferro", "count": 3},
+      {"item": "manico_legno", "count": 1}
+    ]
+  },
+  {
+    "id": "craft_galea_bronzo",
+    "name": "Forgia Galea",
+    "skill": "fabbro",
+    "required_skill": 20,
+    "skill_xp": 25,
+    "result_item": "galea_bronzo",
+    "result_count": 1,
+    "ingredients": [
+      {"item": "barra_bronzo", "count": 5},
+      {"item": "imbottitura_cuoio", "count": 1}
+    ]
+  },
+  {
+    "id": "craft_lorica_segmentata",
+    "name": "Forgia Lorica Segmentata",
+    "skill": "fabbro",
+    "required_skill": 100,
+    "skill_xp": 80,
+    "result_item": "lorica_segmentata",
+    "result_count": 1,
+    "ingredients": [
+      {"item": "barra_acciaio", "count": 12},
+      {"item": "rivetti_bronzo", "count": 20},
+      {"item": "imbottitura_cuoio", "count": 3}
+    ]
+  },
+  {
+    "id": "craft_ascia_da_guerra",
+    "name": "Forgia Ascia da Guerra",
+    "skill": "fabbro",
+    "required_skill": 10,
+    "skill_xp": 20,
+    "result_item": "ascia_da_guerra",
+    "result_count": 1,
+    "ingredients": [
+      {"item": "barra_ferro", "count": 4},
+      {"item": "manico_quercia", "count": 1}
+    ]
+  }
+]

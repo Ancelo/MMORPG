@@ -1,0 +1,144 @@
+[
+  {
+    "id": "auto_attack",
+    "name": "Attacco Automatico",
+    "class_id": "",
+    "description": "Attacco base senza classe specifica. Usa l'arma equipaggiata.",
+    "target_type": "SINGLE_ENEMY",
+    "range": 2.5,
+    "cast_time": 0.0,
+    "cooldown": 0.0,
+    "endurance_cost": 0,
+    "base_damage": 10,
+    "damage_type": "physical",
+    "stat_coefficient": 1.0,
+    "required_level": 1
+  },
+  {
+    "id": "pozione_cura_minore",
+    "name": "Pozione di Cura Minore",
+    "class_id": "",
+    "description": "Beve una pozione che ripristina 200 punti vita.",
+    "target_type": "SELF",
+    "cast_time": 1.0,
+    "cooldown": 30.0,
+    "base_heal": 200,
+    "stat_coefficient": 1.0,
+    "required_level": 1
+  },
+  {
+    "id": "pozione_cura_media",
+    "name": "Pozione di Cura Media",
+    "class_id": "",
+    "description": "Beve una pozione che ripristina 600 punti vita.",
+    "target_type": "SELF",
+    "cast_time": 1.0,
+    "cooldown": 30.0,
+    "base_heal": 600,
+    "stat_coefficient": 1.0,
+    "required_level": 15
+  },
+  {
+    "id": "stun_2s",
+    "name": "Stordito",
+    "type": "effect",
+    "description": "Impossibilitato a muoversi o usare abilità.",
+    "duration": 2.0,
+    "stat_modifiers": { "speed": -999 }
+  },
+  {
+    "id": "stun_3s",
+    "name": "Stordito",
+    "type": "effect",
+    "duration": 3.0,
+    "stat_modifiers": { "speed": -999 }
+  },
+  {
+    "id": "radici_6s",
+    "name": "Radici",
+    "type": "effect",
+    "description": "Immobilizzato dalle radici. Non può muoversi ma può usare abilità.",
+    "duration": 6.0,
+    "stat_modifiers": { "speed": -999 }
+  },
+  {
+    "id": "slow_50pct_5s",
+    "name": "Rallentato",
+    "type": "effect",
+    "duration": 5.0,
+    "stat_modifiers": { "speed": -2.5 }
+  },
+  {
+    "id": "fuoco_dot_5s",
+    "name": "Bruciatura",
+    "type": "effect",
+    "duration": 5.0,
+    "tick_interval": 1.0,
+    "dot_damage": 15,
+    "damage_type": "fire"
+  },
+  {
+    "id": "hot_rigenerazione",
+    "name": "Rigenerazione",
+    "type": "effect",
+    "duration": 15.0,
+    "tick_interval": 3.0,
+    "hot_heal": 80
+  },
+  {
+    "id": "testudo_buff",
+    "name": "Formazione Testudo",
+    "type": "effect",
+    "duration": 10.0,
+    "stat_modifiers": { "armor": 500, "magic_resist": 200, "speed": -3.0 }
+  },
+  {
+    "id": "furia_romana_buff",
+    "name": "Furia Romana",
+    "type": "effect",
+    "duration": 15.0,
+    "stat_modifiers": { "strength": 8, "armor": -50 }
+  },
+  {
+    "id": "str_buff_15pct",
+    "name": "Grido di Guerra",
+    "type": "effect",
+    "duration": 30.0,
+    "stat_modifiers": { "strength": 4 }
+  },
+  {
+    "id": "forma_lupo_buff",
+    "name": "Forma del Lupo",
+    "type": "effect",
+    "duration": 30.0,
+    "stat_modifiers": { "strength": 6, "speed": 2.5, "armor": -20 }
+  },
+  {
+    "id": "armor_debuff_10s",
+    "name": "Armatura Ridotta",
+    "type": "effect",
+    "duration": 10.0,
+    "stat_modifiers": { "armor": -60 }
+  },
+  {
+    "id": "furia_wotan_buff",
+    "name": "Furia di Wotan",
+    "type": "effect",
+    "duration": 30.0,
+    "stat_modifiers": { "strength": 25, "speed": 3.0, "armor": -150 }
+  },
+  {
+    "id": "invulnerabilita_4s",
+    "name": "Pelle di Pietra",
+    "type": "effect",
+    "duration": 4.0,
+    "stat_modifiers": { "armor": 9999, "magic_resist": 9999 }
+  },
+  {
+    "id": "maledizione_danno_20pct",
+    "name": "Maledetta",
+    "type": "effect",
+    "duration": 30.0,
+    "stat_modifiers": { "armor": -80, "magic_resist": -60 }
+  }
+]
