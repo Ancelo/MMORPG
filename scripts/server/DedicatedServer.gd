@@ -26,6 +26,21 @@ func _ready() -> void:
 	_rvr_manager = RvRManager.new()
 	add_child(_rvr_manager)
 
+	var party_manager := PartyManager.new()
+	add_child(party_manager)
+
+	var loot_manager := LootManager.new()
+	add_child(loot_manager)
+
+	var dungeon_manager := DungeonManager.new()
+	add_child(dungeon_manager)
+
+	var guild_manager := GuildManager.new()
+	add_child(guild_manager)
+
+	var keep_assault_manager := KeepAssaultManager.new()
+	add_child(keep_assault_manager)
+
 	EventBus.player_connected.connect(_on_player_connected)
 	EventBus.player_disconnected.connect(_on_player_disconnected)
 

@@ -36,6 +36,25 @@ signal inventory_changed()
 signal xp_gained(amount: int, total: int, level: int)
 signal level_up(new_level: int, character_class: String)
 
+# --- Party ---
+signal party_formed(party_id: int)
+signal party_disbanded(party_id: int)
+signal party_member_joined(party_id: int, character_name: String)
+signal party_member_left(party_id: int, character_name: String)
+signal party_leader_changed(party_id: int, new_leader_name: String)
+
+# --- Loot ---
+signal loot_body_spawned(body: Node)
+signal loot_body_emptied(body: Node)
+signal item_looted(character_name: String, item_id: String)
+
+# --- Keep Assault ---
+signal keep_assault_started(keep_id: String, attacking_faction: int)
+signal keep_captured(keep_id: String, new_owner: int)
+signal keep_assault_repelled(keep_id: String)
+signal siege_weapon_placed(keep_id: String, siege_type: int, faction: int)
+signal siege_weapon_fired(keep_id: String, siege_type: int)
+
 # --- RvR (Realm vs Realm) ---
 signal rvr_objective_captured(objective_id: String, faction: int)
 signal rvr_score_updated(roman: int, galli: int, germani: int)

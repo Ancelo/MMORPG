@@ -1,0 +1,125 @@
+[
+  {
+    "id": "prova_del_berserker",
+    "name": "La Prova del Guerriero",
+    "description": "Per essere riconosciuto dalla tribù devi dimostrare il tuo valore in battaglia. Uccidi i lupi della Selva Nera e porta la loro pelliccia al Capo.",
+    "giver": "capo_tribù_arminius",
+    "required_level": 1,
+    "required_faction": 3,
+    "prerequisites": [],
+    "objectives": [
+      {
+        "id": "uccidi_lupi_selva",
+        "type": "kill",
+        "target": "lupo_selva_nera",
+        "description": "Uccidi lupi della Selva Nera",
+        "count": 8
+      },
+      {
+        "id": "porta_pellicce",
+        "type": "collect",
+        "item": "pelliccia_lupo",
+        "description": "Porta le pellicce al Capo",
+        "count": 3
+      }
+    ],
+    "rewards": { "xp": 700, "gold": 12, "items": ["ascia_da_guerra"] }
+  },
+  {
+    "id": "rito_sciamanico",
+    "name": "Il Rito dello Sciamano",
+    "description": "Lo Sciamano Aldric ti chiede di raccogliere ingredienti per un rituale sacro a Wotan.",
+    "giver": "sciamano_aldric",
+    "required_level": 3,
+    "required_faction": 3,
+    "prerequisites": ["prova_del_berserker"],
+    "objectives": [
+      {
+        "id": "raccogli_ossa",
+        "type": "collect",
+        "item": "osso_orso",
+        "description": "Raccogli ossa di orso germanico",
+        "count": 5
+      },
+      {
+        "id": "partecipa_rituale",
+        "type": "location",
+        "location": "altare_wotan",
+        "description": "Partecipa al rituale a Wotan",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 1300, "gold": 28, "items": ["amuleto_di_wotan"] }
+  },
+  {
+    "id": "omaggio_a_wotan",
+    "name": "Omaggio a Wotan",
+    "description": "Per ricevere la benedizione di Wotan devi dimostrare il tuo valore contro il nemico romano. Attacca una pattuglia romana.",
+    "giver": "sciamano_aldric",
+    "required_level": 5,
+    "required_faction": 3,
+    "prerequisites": ["rito_sciamanico"],
+    "objectives": [
+      {
+        "id": "uccidi_romani",
+        "type": "kill",
+        "target": "pattuglia_romana",
+        "description": "Elimina pattuglie romane nella zona di frontiera",
+        "count": 6
+      }
+    ],
+    "rewards": { "xp": 2200, "gold": 45, "items": ["cintura_del_guerriero"] }
+  },
+  {
+    "id": "difesa_selva_nera",
+    "name": "Difendi la Selva Nera",
+    "description": "I Romani avanzano verso la Selva Nera! Arminius ti chiede di respingere l'avanzata con i tuoi compagni.",
+    "giver": "capo_tribù_arminius",
+    "required_level": 8,
+    "required_faction": 3,
+    "prerequisites": ["omaggio_a_wotan"],
+    "objectives": [
+      {
+        "id": "respingi_romani",
+        "type": "kill",
+        "target": "legionario_romano_invasore",
+        "description": "Uccidi legionari romani che invadono la Selva Nera",
+        "count": 12
+      },
+      {
+        "id": "uccidi_centurione",
+        "type": "kill",
+        "target": "centurione_invasore",
+        "description": "Abbatti il Centurione romano",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 4500, "gold": 110, "items": ["corazza_del_guerriero_germanico"] }
+  },
+  {
+    "id": "battaglia_del_reno",
+    "name": "La Battaglia del Reno",
+    "description": "È giunto il momento decisivo. Le tre fazioni si scontrano alla Frontiera del Reno. Arminius guida l'assalto alla Fortezza del Reno. Unisciti alla battaglia.",
+    "giver": "capo_tribù_arminius",
+    "required_level": 30,
+    "required_faction": 3,
+    "prerequisites": ["difesa_selva_nera"],
+    "objectives": [
+      {
+        "id": "assalta_fortezza",
+        "type": "kill",
+        "target": "difensore_romano",
+        "description": "Uccidi difensori romani alla Fortezza del Reno",
+        "count": 20
+      },
+      {
+        "id": "conquista_fortezza",
+        "type": "location",
+        "location": "keep_rhenus_sala_del_trono",
+        "description": "Raggiungi la sala del trono della Fortezza del Reno",
+        "count": 1
+      }
+    ],
+    "rewards": { "xp": 18000, "gold": 450, "items": ["armatura_del_condottiero_germanico", "titolo_campione_del_reno"] }
+  }
+]

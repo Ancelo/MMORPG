@@ -1,0 +1,154 @@
+[
+  {
+    "id": "pozione_cura_minore_item",
+    "name": "Pozione di Cura Minore",
+    "description": "Un flacone di erbe medicinali. Ripristina 200 vita.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 20,
+    "use_effect": "pozione_cura_minore",
+    "use_cooldown": 30.0,
+    "value": 5
+  },
+  {
+    "id": "pozione_cura_media_item",
+    "name": "Pozione di Cura Media",
+    "description": "Miscela potente di erbe e radici. Ripristina 600 vita.",
+    "type": "CONSUMABLE",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 10,
+    "use_effect": "pozione_cura_media",
+    "use_cooldown": 30.0,
+    "value": 25
+  },
+  {
+    "id": "antidoto",
+    "name": "Antidoto",
+    "description": "Rimuove effetti di veleno.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 20,
+    "use_effect": "cleanse_poison",
+    "use_cooldown": 10.0,
+    "value": 8
+  },
+  {
+    "id": "pozione_endurance",
+    "name": "Pozione di Resistenza",
+    "description": "Ripristina 100 punti Endurance.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 20,
+    "use_effect": "restore_endurance",
+    "use_cooldown": 30.0,
+    "value": 6
+  },
+  {
+    "id": "pozione_potere",
+    "name": "Pozione di Potere",
+    "description": "Ripristina 200 Potere (mana).",
+    "type": "CONSUMABLE",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 10,
+    "use_effect": "restore_power",
+    "use_cooldown": 30.0,
+    "value": 20
+  },
+  {
+    "id": "barra_ferro",
+    "name": "Barra di Ferro",
+    "description": "Ferro grezzo da forgia.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 100,
+    "value": 3
+  },
+  {
+    "id": "barra_bronzo",
+    "name": "Barra di Bronzo",
+    "description": "Lega di rame e stagno.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 100,
+    "value": 5
+  },
+  {
+    "id": "barra_acciaio",
+    "name": "Barra d'Acciaio",
+    "description": "Acciaio di alta qualità, difficile da reperire.",
+    "type": "CONSUMABLE",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 50,
+    "value": 15
+  },
+  {
+    "id": "erba_medicinale",
+    "name": "Erba Medicinale",
+    "description": "Erbe curative comuni. Ingrediente base per l'erborista.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 200,
+    "value": 1
+  },
+  {
+    "id": "mistletoe_sacro",
+    "name": "Mistletoe Sacro",
+    "description": "Vischio raccolto dai Druidi al solstizio. Potente ingrediente magico.",
+    "type": "CONSUMABLE",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 50,
+    "value": 20
+  },
+  {
+    "id": "manico_legno",
+    "name": "Manico di Legno",
+    "description": "Manico per armi leggero.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 50,
+    "value": 2
+  },
+  {
+    "id": "manico_quercia",
+    "name": "Manico di Quercia",
+    "description": "Manico robusto da quercia antica.",
+    "type": "CONSUMABLE",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 30,
+    "value": 8
+  },
+  {
+    "id": "pietra_assedio",
+    "name": "Pietra da Assedio",
+    "description": "Munizione per il Trebuchet. Ogni colpo consuma una pietra.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 50,
+    "value": 10
+  },
+  {
+    "id": "pergamena_ritorno",
+    "name": "Pergamena del Ritorno",
+    "description": "Teleporta il giocatore al suo punto di respawn. Singolo uso.",
+    "type": "CONSUMABLE",
+    "rarity": "COMMON",
+    "slot": "NONE",
+    "stack_max": 5,
+    "use_effect": "teleport_respawn",
+    "use_cooldown": 600.0,
+    "value": 30
+  }
+]
