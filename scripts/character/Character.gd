@@ -55,6 +55,14 @@ func _ready() -> void:
 	stats.current_power = stats.max_power
 	_load_class_data()
 	_setup_regen()
+	call_deferred("_setup_nameplate")
+
+func _setup_nameplate() -> void:
+	if not nameplate_anchor:
+		return
+	var nameplate := nameplate_anchor.get_node_or_null("Nameplate")
+	if nameplate and nameplate.has_method("setup"):
+		nameplate.setup(self)
 
 func _load_class_data() -> void:
 	if character_class.is_empty():

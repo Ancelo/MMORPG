@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://nameplate"]
+
+[ext_resource type="Script" path="res://scripts/ui/Nameplate.gd" id="1_nameplate"]
+
+[node name="Nameplate" type="Node3D"]
+script = ExtResource("1_nameplate")
+
+[node name="NameLabel" type="Label3D" parent="."]
+position = Vector3(0, 0, 0)
+billboard = 3
+no_depth_test = true
+text = "Name"
+font_size = 18
+outline_size = 4
+modulate = Color(1, 1, 1, 1)
+
+[node name="HealthLabel" type="Label3D" parent="."]
+position = Vector3(0, -0.28, 0)
+billboard = 3
+no_depth_test = true
+text = "100%"
+font_size = 14
+outline_size = 3
+modulate = Color(0.2, 0.9, 0.2, 1)

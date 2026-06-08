@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cavallo_da_guerra",
+    "name": "Cavallo da Guerra",
+    "description": "Un robusto destriero romano addestrato per la battaglia.",
+    "type": "MOUNT",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 1,
+    "speed_bonus": 8,
+    "faction": 1,
+    "required_level": 10,
+    "value": 500
+  },
+  {
+    "id": "pony_celtico",
+    "name": "Pony Celtico",
+    "description": "Un pony agile tipico delle pianure galliche.",
+    "type": "MOUNT",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 1,
+    "speed_bonus": 7,
+    "faction": 2,
+    "required_level": 10,
+    "value": 450
+  },
+  {
+    "id": "stallone_germanico",
+    "name": "Stallone Germanico",
+    "description": "Un potente stallone selvaggio delle foreste del nord.",
+    "type": "MOUNT",
+    "rarity": "UNCOMMON",
+    "slot": "NONE",
+    "stack_max": 1,
+    "speed_bonus": 8,
+    "faction": 3,
+    "required_level": 10,
+    "value": 480
+  },
+  {
+    "id": "destriero_imperiale",
+    "name": "Destriero Imperiale",
+    "description": "Un cavallo da parata imperiale con armatura dorata. Velocissimo.",
+    "type": "MOUNT",
+    "rarity": "RARE",
+    "slot": "NONE",
+    "stack_max": 1,
+    "speed_bonus": 12,
+    "faction": 0,
+    "required_level": 30,
+    "value": 2000
+  }
+]

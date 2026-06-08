@@ -64,6 +64,12 @@ func faction_name(faction: Faction) -> String:
 		Faction.GERMANI: return "Germani"
 		_: return "Senza Fazione"
 
+func peer_id_for(character: Node) -> int:
+	for pid in players:
+		if players[pid] == character:
+			return pid
+	return -1
+
 func faction_color(faction: Faction) -> Color:
 	match faction:
 		Faction.ROMAN:   return Color(0.8, 0.1, 0.1)   # Rosso imperiale

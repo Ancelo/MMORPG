@@ -63,8 +63,7 @@ func send_player_input(input_data: Dictionary) -> void:
 func _receive_player_input(input_data: Dictionary) -> void:
 	if not is_server:
 		return
-	var sender_id := multiplayer.get_remote_sender_id()
-	var character := GameManager.get_player(sender_id)
+	var character := GameManager.get_player(_get_sender_id())
 	if character and character.has_method("apply_input"):
 		character.apply_input(input_data)
 
@@ -97,8 +96,7 @@ func request_use_ability(ability_id: String, target_id: int) -> void:
 func _rpc_use_ability(ability_id: String, target_id: int) -> void:
 	if not is_server:
 		return
-	var sender_id := multiplayer.get_remote_sender_id()
-	var character := GameManager.get_player(sender_id)
+	var character := GameManager.get_player(_get_sender_id())
 	if character:
 		character.get_node("AbilityManager").server_use_ability(ability_id, target_id)
 
@@ -118,9 +116,12 @@ func send_chat_message(message: String, channel: String = "general") -> void:
 func _rpc_chat_message(message: String, channel: String) -> void:
 	if not is_server:
 		return
-	var sender_id := multiplayer.get_remote_sender_id()
-	var character := GameManager.get_player(sender_id)
+	var character := GameManager.get_player(_get_sender_id())
 	if not character:
+		return
+	# Let command parser intercept slash-commands
+	var parsers := get_tree().get_nodes_in_group("chat_command_parser")
+	if not parsers.is_empty() and parsers[0].parse(message, character):
 		return
 	var sender_name: String = character.character_name
 	var faction: int = character.faction
@@ -150,6 +151,10 @@ func _on_connected_to_server() -> void:
 func _on_connection_failed() -> void:
 	push_error("[Network] Connection failed")
 	EventBus.connection_failed.emit()
+
+func _get_sender_id() -> int:
+	var id := multiplayer.get_remote_sender_id()
+	return id if id != 0 else multiplayer.get_unique_id()
 
 func _on_server_disconnected() -> void:
 	push_error("[Network] Server disconnected")

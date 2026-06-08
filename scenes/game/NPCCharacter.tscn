@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://npc_character"]
+
+[ext_resource type="Script" path="res://scripts/character/NPCCharacter.gd" id="1_npc"]
+[ext_resource type="Script" path="res://scripts/combat/AbilityManager.gd" id="2_ability"]
+[ext_resource type="Script" path="res://scripts/items/Inventory.gd" id="3_inventory"]
+[ext_resource type="PackedScene" path="res://scenes/ui/Nameplate.tscn" id="4_nameplate"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.4
+height = 1.8
+
+[node name="NPCCharacter" type="CharacterBody3D"]
+script = ExtResource("1_npc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_1")
+
+[node name="MeshRoot" type="Node3D" parent="."]
+
+[node name="NameplateAnchor" type="Node3D" parent="."]
+position = Vector3(0, 2.1, 0)
+
+[node name="Nameplate" parent="NameplateAnchor" instance=ExtResource("4_nameplate")]
+
+[node name="AbilityManager" type="Node" parent="."]
+script = ExtResource("2_ability")
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("3_inventory")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]

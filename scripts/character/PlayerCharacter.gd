@@ -26,7 +26,8 @@ const MAX_INPUT_BUFFER := 64
 
 func _ready() -> void:
 	super._ready()
-	if multiplayer.get_unique_id() == name.to_int():
+	var my_id := name.to_int()
+	if my_id > 0 and multiplayer.get_unique_id() == my_id:
 		_setup_as_local_player()
 	else:
 		_setup_as_remote_player()
@@ -106,7 +107,10 @@ func _gather_and_send_input() -> void:
 		"jump": Input.is_action_just_pressed("jump"),
 		"dodge": Input.is_action_just_pressed("dodge"),
 	}
-	NetworkManager.send_player_input(input_data)
+	if NetworkManager.is_server:
+		apply_input(input_data)
+	else:
+		NetworkManager.send_player_input(input_data)
 
 func apply_input(input_data: Dictionary) -> void:
 	if input_data.has("dir"):
@@ -138,7 +142,10 @@ func _perform_auto_attack() -> void:
 	if dist > range_max:
 		return
 	_auto_attack_timer = 1.0 / stats.attack_speed
-	NetworkManager.request_use_ability("auto_attack", current_target.name.to_int())
+	if NetworkManager.is_server:
+		ability_manager.server_use_ability("auto_attack", current_target.name.to_int())
+	else:
+		NetworkManager.request_use_ability("auto_attack", current_target.name.to_int())
 
 func _use_ability_slot(slot: int) -> void:
 	if not ability_manager:
@@ -147,7 +154,10 @@ func _use_ability_slot(slot: int) -> void:
 	if ability_id.is_empty():
 		return
 	var target_id := current_target.name.to_int() if current_target else -1
-	NetworkManager.request_use_ability(ability_id, target_id)
+	if NetworkManager.is_server:
+		ability_manager.server_use_ability(ability_id, target_id)
+	else:
+		NetworkManager.request_use_ability(ability_id, target_id)
 
 func _target_nearest_enemy() -> void:
 	var best: Character = null

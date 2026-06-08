@@ -41,6 +41,9 @@ func _ready() -> void:
 	var keep_assault_manager := KeepAssaultManager.new()
 	add_child(keep_assault_manager)
 
+	var chat_parser := load("res://scripts/chat/ChatCommandParser.gd").new()
+	add_child(chat_parser)
+
 	EventBus.player_connected.connect(_on_player_connected)
 	EventBus.player_disconnected.connect(_on_player_disconnected)
 

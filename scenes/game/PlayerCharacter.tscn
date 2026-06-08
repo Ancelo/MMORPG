@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://player_character"]
+
+[ext_resource type="Script" path="res://scripts/character/PlayerCharacter.gd" id="1_player"]
+[ext_resource type="Script" path="res://scripts/combat/AbilityManager.gd" id="2_ability"]
+[ext_resource type="Script" path="res://scripts/items/Inventory.gd" id="3_inventory"]
+[ext_resource type="Script" path="res://scripts/quests/QuestManager.gd" id="4_quest"]
+[ext_resource type="Script" path="res://scripts/character/ExperienceManager.gd" id="5_xp"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="6_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/Nameplate.tscn" id="7_nameplate"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.4
+height = 1.8
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_1")
+
+[node name="MeshRoot" type="Node3D" parent="."]
+
+[node name="NameplateAnchor" type="Node3D" parent="."]
+position = Vector3(0, 2.1, 0)
+
+[node name="Nameplate" parent="NameplateAnchor" instance=ExtResource("7_nameplate")]
+
+[node name="CameraArm" type="SpringArm3D" parent="."]
+position = Vector3(0, 1.6, 0)
+spring_length = 5.0
+collision_mask = 1
+
+[node name="Camera3D" type="Camera3D" parent="CameraArm"]
+position = Vector3(0, 0, 0)
+fov = 75.0
+
+[node name="AbilityManager" type="Node" parent="."]
+script = ExtResource("2_ability")
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("3_inventory")
+
+[node name="QuestManager" type="Node" parent="."]
+script = ExtResource("4_quest")
+
+[node name="ExperienceManager" type="Node" parent="."]
+script = ExtResource("5_xp")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]

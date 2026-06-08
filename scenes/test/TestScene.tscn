@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://test_scene"]
+
+[ext_resource type="Script" path="res://scripts/game/OfflineGameBootstrap.gd" id="1_bootstrap"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
+size = Vector3(200, 2, 200)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ground"]
+size = Vector3(200, 2, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ground"]
+albedo_color = Color(0.3, 0.5, 0.2, 1)
+roughness = 0.9
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
+sky_top_color = Color(0.08, 0.37, 0.73, 1)
+sky_horizon_color = Color(0.65, 0.74, 0.78, 1)
+ground_bottom_color = Color(0.15, 0.1, 0.05, 1)
+ground_horizon_color = Color(0.45, 0.4, 0.3, 1)
+
+[sub_resource type="Sky" id="Sky_1"]
+sky_material = SubResource("ProceduralSkyMaterial_1")
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode = 2
+sky = SubResource("Sky_1")
+ambient_light_source = 3
+ambient_light_energy = 0.5
+tonemap_mode = 2
+
+[node name="TestScene" type="Node3D"]
+script = ExtResource("1_bootstrap")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 30, 0)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+position = Vector3(0, -1, 0)
+shape = SubResource("BoxShape3D_ground")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+position = Vector3(0, -1, 0)
+mesh = SubResource("BoxMesh_ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_ground")
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+position = Vector3(0, 1, 0)
+
+[node name="NPCSpawnPoints" type="Node3D" parent="."]
+
+[node name="NPC_Enemy_1" type="Node3D" parent="NPCSpawnPoints"]
+position = Vector3(10, 1, 5)
+
+[node name="NPC_Enemy_2" type="Node3D" parent="NPCSpawnPoints"]
+position = Vector3(-8, 1, 12)
