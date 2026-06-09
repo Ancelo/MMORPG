@@ -98,7 +98,7 @@ func list_characters_for_account(account_id: int) -> Array:
 func character_name_available(name: String) -> bool:
 	if USE_JSON_FALLBACK:
 		return not FileAccess.file_exists("user://characters/%s.json" % name)
-	var result := _db.query("SELECT id FROM characters WHERE name = '%s'" % name)
+	_db.query("SELECT id FROM characters WHERE name = '%s'" % name)
 	return _db.query_result.size() == 0
 
 func _character_to_dict(c: Character) -> Dictionary:
@@ -202,7 +202,7 @@ func _load_json(path: String) -> Dictionary:
 	var file := FileAccess.open(path, FileAccess.READ)
 	if not file:
 		return {}
-	var parsed := JSON.parse_string(file.get_as_text())
+	var parsed: Variant = JSON.parse_string(file.get_as_text())
 	return parsed if parsed is Dictionary else {}
 
 func _list_json_characters() -> Array:

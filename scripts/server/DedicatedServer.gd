@@ -92,6 +92,6 @@ func _on_player_disconnected(peer_id: int) -> void:
 func _broadcast_world_state() -> void:
 	var state: Dictionary = {}
 	for peer_id in GameManager.players:
-		var character := GameManager.players[peer_id]
+		var character: Character = GameManager.players[peer_id]
 		state[str(peer_id)] = character.get_network_state()
 	NetworkManager.broadcast_world_state(state)

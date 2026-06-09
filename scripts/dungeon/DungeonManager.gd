@@ -27,7 +27,7 @@ func _load_dungeon_data() -> void:
 		if fname.ends_with(".json"):
 			var file := FileAccess.open("res://data/dungeons/" + fname, FileAccess.READ)
 			if file:
-				var parsed := JSON.parse_string(file.get_as_text())
+				var parsed: Variant = JSON.parse_string(file.get_as_text())
 				if parsed is Dictionary:
 					_dungeon_data[parsed["id"]] = parsed
 		fname = dir.get_next()
@@ -37,7 +37,7 @@ func _load_dungeon_data() -> void:
 func request_enter(dungeon_id: String, players: Array) -> int:
 	if not multiplayer.is_server():
 		return -1
-	var dungeon := _dungeon_data.get(dungeon_id, {})
+	var dungeon: Dictionary = _dungeon_data.get(dungeon_id, {})
 	if dungeon.is_empty():
 		push_error("[Dungeon] Unknown dungeon: %s" % dungeon_id)
 		return -1
@@ -122,7 +122,7 @@ func on_boss_defeated(instance_id: int, boss_id: String) -> void:
 		return
 	instance["bosses_defeated"].append(boss_id)
 
-	var dungeon := _dungeon_data.get(instance["dungeon_id"], {})
+	var dungeon: Dictionary = _dungeon_data.get(instance["dungeon_id"], {})
 	var all_bosses: Array = dungeon.get("bosses", [])
 	var all_defeated := true
 	for b in all_bosses:
@@ -140,7 +140,7 @@ func _complete_instance(instance_id: int) -> void:
 		"Dungeon completato: %s!" % instance["dungeon_name"],
 		"dungeon_complete"
 	)
-	var dungeon := _dungeon_data.get(instance["dungeon_id"], {})
+	var dungeon: Dictionary = _dungeon_data.get(instance["dungeon_id"], {})
 	_grant_dungeon_rewards(instance["players"], dungeon.get("completion_rewards", {}))
 	await get_tree().create_timer(30.0).timeout
 	_expire_instance(instance_id)

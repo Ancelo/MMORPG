@@ -44,7 +44,7 @@ func _refresh_list() -> void:
 		item_list.add_item(display)
 		item_list.set_item_metadata(item_list.item_count - 1, entry["item_id"])
 		# Color by rarity
-		var rarity := data.get("rarity", "COMMON")
+		var rarity: String = data.get("rarity", "COMMON")
 		match rarity:
 			"UNCOMMON": item_list.set_item_custom_fg_color(item_list.item_count - 1, Color(0.3, 0.8, 0.3))
 			"RARE":     item_list.set_item_custom_fg_color(item_list.item_count - 1, Color(0.3, 0.5, 1.0))

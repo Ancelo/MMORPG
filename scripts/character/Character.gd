@@ -217,7 +217,7 @@ func apply_status_effect(effect_id: String, effect_data: Dictionary) -> void:
 func remove_status_effect(effect_id: String) -> void:
 	if not status_effects.has(effect_id):
 		return
-	var effect := status_effects[effect_id]
+	var effect: Dictionary = status_effects[effect_id]
 	if effect.has("stat_modifiers"):
 		stats.remove_modifier(effect_id)
 	status_effects.erase(effect_id)

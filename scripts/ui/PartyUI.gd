@@ -121,7 +121,7 @@ func _build_frame(peer_id: int, member_data: Dictionary) -> Control:
 	return container
 
 func _update_member_frame(peer_id: int, _member_data: Dictionary) -> void:
-	var frame := _member_frames.get(peer_id)
+	var frame: Control = _member_frames.get(peer_id)
 	if not frame:
 		return
 	var character := GameManager.get_player(peer_id) as Character

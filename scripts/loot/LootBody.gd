@@ -53,7 +53,7 @@ func _distribute_gold() -> void:
 		return
 	var pm := _get_party_manager()
 	if pm and _party_id >= 0:
-		var party := pm._parties.get(_party_id)
+		var party: Party = pm._parties.get(_party_id)
 		if party:
 			var split := _gold / party.size()
 			for peer_id in party.get_peer_ids():
@@ -89,7 +89,7 @@ func can_loot(peer_id: int) -> bool:
 		Party.LootMethod.MASTER_LOOTER:
 			var pm := _get_party_manager()
 			if pm:
-				var party := pm._parties.get(_party_id)
+				var party: Party = pm._parties.get(_party_id)
 				return party != null and party.master_looter_peer_id == peer_id
 			return peer_id == _owner_peer_id
 		Party.LootMethod.NEED_GREED:
@@ -136,7 +136,7 @@ func _start_need_greed_vote(initiator_peer_id: int) -> void:
 
 	var pm := _get_party_manager()
 	if pm and _party_id >= 0:
-		var party := pm._parties.get(_party_id)
+		var party: Party = pm._parties.get(_party_id)
 		if party:
 			for peer_id in party.get_peer_ids():
 				_send_ng_vote_request.rpc_id(peer_id, item_entry["item_id"], item_data.get("name","?"))
@@ -175,7 +175,7 @@ func _check_ng_resolution() -> void:
 	if not pm or _party_id < 0:
 		_resolve_ng_vote()
 		return
-	var party := pm._parties.get(_party_id)
+	var party: Party = pm._parties.get(_party_id)
 	if not party:
 		_resolve_ng_vote()
 		return

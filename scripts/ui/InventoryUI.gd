@@ -39,7 +39,7 @@ func _ready() -> void:
 func _on_character_spawned(_character: Node, peer_id: int) -> void:
 	if peer_id != GameManager.local_peer_id:
 		return
-	var character := GameManager.local_player
+	var character: Node = GameManager.local_player
 	if character and character.get_node_or_null("Inventory"):
 		_inventory = character.get_node("Inventory") as Inventory
 		_refresh()
@@ -62,7 +62,7 @@ func _connect_equip_slots() -> void:
 	for slot_name in EQUIP_SLOT_MAP:
 		var btn := equip_panel.get_node_or_null(slot_name) as Button
 		if btn:
-			var item_slot := EQUIP_SLOT_MAP[slot_name]
+			var item_slot: Item.Slot = EQUIP_SLOT_MAP[slot_name]
 			btn.pressed.connect(func(): _on_equip_slot_clicked(item_slot))
 
 func _refresh() -> void:
@@ -94,7 +94,7 @@ func _update_equip_display() -> void:
 		var btn := equip_panel.get_node_or_null(slot_name) as Button
 		if not btn:
 			continue
-		var item_slot := EQUIP_SLOT_MAP[slot_name]
+		var item_slot: Item.Slot = EQUIP_SLOT_MAP[slot_name]
 		var item := _inventory.get_equipped(item_slot)
 		if item:
 			btn.text = item.display_name

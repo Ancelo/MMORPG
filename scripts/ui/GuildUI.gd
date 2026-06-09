@@ -49,7 +49,7 @@ func _refresh() -> void:
 	motd_label.text = guild.get("motd", "")
 	member_list.clear()
 	for member in guild.get("members", []):
-		var rank_name := GuildManager.get_guild_rank_name_static(member.get("rank", 0))
+		var rank_name: String = GuildManager.get_guild_rank_name_static(member.get("rank", 0))
 		member_list.add_item("[%s] %s" % [rank_name, member["name"]])
 
 func _on_guild_chat_submitted(text: String) -> void:

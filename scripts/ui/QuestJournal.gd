@@ -58,8 +58,8 @@ func _show_quest_detail(quest_id: String) -> void:
 	for obj in data.get("objectives", []):
 		var status_str := ""
 		if quest:
-			var progress := quest.progress.get(obj["id"], 0)
-			var target := obj.get("count", 1)
+			var progress: int = quest.progress.get(obj["id"], 0)
+			var target: int = obj.get("count", 1)
 			var done := progress >= target
 			status_str = " [color=%s][%d/%d][/color]" % [
 				"#00ff00" if done else "#ffaa00",

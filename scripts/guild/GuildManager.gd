@@ -76,7 +76,7 @@ func create_guild(guild_name: String, founder: Character, faction: GameManager.F
 # ----- Membership -----
 
 func invite_member(inviter: Character, target_name: String) -> bool:
-	var guild_name := _player_guild.get(inviter.character_name, "")
+	var guild_name: String = _player_guild.get(inviter.character_name, "")
 	if guild_name.is_empty():
 		return false
 	var guild: Dictionary = _guilds[guild_name]
@@ -112,7 +112,7 @@ func accept_invite(character: Character, guild_name: String) -> bool:
 	return true
 
 func leave_guild(character: Character) -> bool:
-	var guild_name := _player_guild.get(character.character_name, "")
+	var guild_name: String = _player_guild.get(character.character_name, "")
 	if guild_name.is_empty():
 		return false
 	var guild: Dictionary = _guilds[guild_name]
@@ -132,7 +132,7 @@ func demote_member(demoter: Character, target_name: String) -> bool:
 	return _change_rank(demoter, target_name, -1)
 
 func _change_rank(actor: Character, target_name: String, delta: int) -> bool:
-	var guild_name := _player_guild.get(actor.character_name, "")
+	var guild_name: String = _player_guild.get(actor.character_name, "")
 	if guild_name.is_empty():
 		return false
 	var guild: Dictionary = _guilds[guild_name]
@@ -157,7 +157,7 @@ func _get_member_rank(guild: Dictionary, char_name: String) -> int:
 # ----- Guild chat -----
 
 func send_guild_chat(sender: Character, message: String) -> void:
-	var guild_name := _player_guild.get(sender.character_name, "")
+	var guild_name: String = _player_guild.get(sender.character_name, "")
 	if guild_name.is_empty():
 		return
 	var guild: Dictionary = _guilds[guild_name]
@@ -178,7 +178,7 @@ func _find_online_player(char_name: String) -> Character:
 # ----- Info -----
 
 func get_guild_of(character_name: String) -> Dictionary:
-	var guild_name := _player_guild.get(character_name, "")
+	var guild_name: String = _player_guild.get(character_name, "")
 	if guild_name.is_empty():
 		return {}
 	return _guilds.get(guild_name, {})

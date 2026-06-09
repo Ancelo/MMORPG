@@ -57,7 +57,7 @@ func get_slot_ability(slot: int) -> String:
 func server_use_ability(ability_id: String, target_id: int) -> void:
 	if not multiplayer.is_server():
 		return
-	var ability := _available_abilities.get(ability_id)
+	var ability: Ability = _available_abilities.get(ability_id)
 	if not ability:
 		return
 	var target := _resolve_target(target_id)

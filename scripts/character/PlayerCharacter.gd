@@ -150,7 +150,7 @@ func _perform_auto_attack() -> void:
 func _use_ability_slot(slot: int) -> void:
 	if not ability_manager:
 		return
-	var ability_id := ability_manager.get_slot_ability(slot)
+	var ability_id: String = ability_manager.get_slot_ability(slot)
 	if ability_id.is_empty():
 		return
 	var target_id := current_target.name.to_int() if current_target else -1

@@ -21,7 +21,7 @@ func _load_recipes() -> void:
 		if fname.ends_with(".json"):
 			var file := FileAccess.open("res://data/crafting/" + fname, FileAccess.READ)
 			if file:
-				var parsed := JSON.parse_string(file.get_as_text())
+				var parsed: Variant = JSON.parse_string(file.get_as_text())
 				if parsed is Array:
 					for recipe in parsed:
 						_recipes[recipe["id"]] = recipe
@@ -30,7 +30,7 @@ func _load_recipes() -> void:
 # ----- Crafting -----
 
 func can_craft(recipe_id: String, crafter: Character) -> String:
-	var recipe := _recipes.get(recipe_id, {})
+	var recipe: Dictionary = _recipes.get(recipe_id, {})
 	if recipe.is_empty():
 		return "Ricetta non trovata"
 	var required_skill: int = recipe.get("required_skill", 0)
@@ -48,7 +48,7 @@ func craft(recipe_id: String, crafter: Character) -> bool:
 		EventBus.notification_pushed.emit("Non puoi creare: %s" % reason, "crafting")
 		return false
 
-	var recipe := _recipes[recipe_id]
+	var recipe: Dictionary = _recipes[recipe_id]
 	var inventory := crafter.get_node_or_null("Inventory") as Inventory
 	if not inventory:
 		return false
@@ -113,7 +113,7 @@ func _get_craft_skill(character: Character, skill: String) -> int:
 
 func _gain_skill_xp(character: Character, skill: String, xp: int) -> void:
 	var key := "craft_%s" % skill
-	var current := character.get_meta(key, 0)
+	var current: int = character.get_meta(key, 0)
 	character.set_meta(key, min(current + xp, MAX_CRAFT_SKILL))
 
 func get_recipes_for_skill(skill: String, skill_level: int) -> Array:

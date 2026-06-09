@@ -116,7 +116,7 @@ func get_equipped(slot: Item.Slot) -> Item:
 	return equipped.get(slot)
 
 func get_weapon_damage() -> Vector2i:
-	var weapon := equipped.get(Item.Slot.WEAPON_MAIN)
+	var weapon: Item = equipped.get(Item.Slot.WEAPON_MAIN)
 	if weapon:
 		return Vector2i(weapon.weapon_damage_min, weapon.weapon_damage_max)
 	return Vector2i(5, 10)  # unarmed
