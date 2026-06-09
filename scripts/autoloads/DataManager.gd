@@ -50,7 +50,7 @@ func _load_json_into(path: String, target: Dictionary) -> void:
 	var file := FileAccess.open(path, FileAccess.READ)
 	if not file:
 		return
-	var parsed := JSON.parse_string(file.get_as_text())
+	var parsed: Variant = JSON.parse_string(file.get_as_text())
 	if parsed is Dictionary:
 		if parsed.has("id"):
 			target[parsed["id"]] = parsed
@@ -64,7 +64,7 @@ func _load_json(path: String) -> Dictionary:
 	if not file:
 		push_error("[DataManager] Cannot read: %s" % path)
 		return {}
-	var parsed := JSON.parse_string(file.get_as_text())
+	var parsed: Variant = JSON.parse_string(file.get_as_text())
 	if parsed is Dictionary:
 		return parsed
 	push_error("[DataManager] Invalid JSON: %s" % path)
